@@ -2,10 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> 
+    <title>Ninth_assignment</title>
 </head>
 <body>
-    
+  <form>
+      <div>
+          <label for="userName">Name:</label>
+          <input type="text" name="userName" id="userName" />
+          <span id="userNameError" class="error-message"></span>
+      </div>
+      <div>
+          <label for="userEmail">Email:</label>
+          <input type="email" name="userEmail" id="userEmail" />
+          <span id="userEmailError" class="error-message"></span>
+      </div>
+      <div>
+          <label for="userAge">Your age:</label>
+          <input type="number" name="userAge" id="userAge" />
+          <span id="userAgeError" class="error-message"></span>
+      </div>
+      <div>
+          <label for="userNumber">Phone number:</label>
+          <input type="tel" name="userNumber" id="userNumber" />
+          <span id="userNumberError" class="error-message"></span>
+      </div>
+      <div>
+        <p>How happy are you now? </p>
+        <input type="range" id="rangeValue" name="rangeValue" value="0" oninput="fun1()">
+        <p id="happy"></p>
+      </div>
+      <div>
+          <p>Date: <input type="text" id="datepicker" /></p>
+      </div>
+      <div>
+          <input type="radio" name="r1" value="hello, student" />Student<br>
+          <input type="radio" name="r1" value="hello, Employee" />Employee<br>
+          <input type="radio" name="r1" value="Goodbye, mister 'do nothing'" />Do nothing<br>
+          <button type="button" onclick="fun2()">Проверить, какой из элементов выбран</button>
+      </div>
+</form>
+<div>
+    <p>Password should have small and capital letters, numbers and special symbols, min length is 8 symbols</p>
+    <form id="passwordForm">
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <label for="confirmPassword">Confirm password:</label>
+        <input type="password" id="confirmPassword" required>
+        <span id="message" class="error-message"></span>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
