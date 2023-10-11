@@ -4,8 +4,17 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css"/>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> 
     <script src="scripts/function1.js"></script>
+    <script src="scripts/function2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.3.4/chai.js"></script>
+    <script>
+        mocha.setup('bdd');
+        var assert = chai.assert;
+      </script>
+
 
     <title>Ninth_assignment</title>
 </head>
@@ -43,7 +52,7 @@
           <input type="radio" name="r1" value="hello, student" />Student<br>
           <input type="radio" name="r1" value="hello, Employee" />Employee<br>
           <input type="radio" name="r1" value="Goodbye, mister 'do nothing'" />Do nothing<br>
-          <button type="button" onclick="fun2()">Проверить, какой из элементов выбран</button>
+          <button type="button" onclick="fun2()">Check, which element was chosen</button>
       </div>
 </form>
 <div>
@@ -59,5 +68,11 @@
     </form>
 </div>
 <script src="scripts/script.js"></script>
+<script src="test/test.js"></script>
+
+<div id="mocha"></div>
+<script>
+    mocha.run();
+  </script>
 </body>
 </html>
